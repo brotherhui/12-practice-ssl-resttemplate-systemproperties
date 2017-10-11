@@ -29,16 +29,4 @@ class ClientController {
     	log.info("I am calling resource  by RestTemplate");
         return restTemplate.getForObject(uri, String.class);
     }
-    
-    @RequestMapping("/restassure")
-    public String restassure(@RequestParam String uri) {
-    	log.info("I am calling resource by RestAssured");
-    	RestAssured.baseURI = uri;
-    	log.info("baseuri is " + uri);
-        Response response = RestAssured.given().get();
-//                .contentType(ContentType.JSON)
-//                .accept(ContentType.JSON)
-//				.get("/user");
-        return response.asString();
-    }
 }
