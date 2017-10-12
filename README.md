@@ -1,4 +1,5 @@
-Notice:
+# Notice:  client-auth: need is enabled in this example
+
 There are 2 ways for a client to access B.
 1. set b's public certificate into JDK
 2. program the ssl certificate (add client's keystore and trusted store(which include B's public key) into SSLContext)
